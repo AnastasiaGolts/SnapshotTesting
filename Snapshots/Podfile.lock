@@ -4,17 +4,21 @@ PODS:
   - iOSSnapshotTestCase/Core (8.0.0)
   - iOSSnapshotTestCase/SwiftSupport (8.0.0):
     - iOSSnapshotTestCase/Core
+  - SnapshotTesting (1.9.0)
 
 DEPENDENCIES:
   - iOSSnapshotTestCase
+  - SnapshotTesting (~> 1.9.0)
 
 SPEC REPOS:
   trunk:
     - iOSSnapshotTestCase
+    - SnapshotTesting
 
 SPEC CHECKSUMS:
   iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
+  SnapshotTesting: 6141c48b6aa76ead61431ca665c14ab9a066c53b
 
-PODFILE CHECKSUM: 9856256ac5e6eeff4b6c5493188ae5b042fc4dfb
+PODFILE CHECKSUM: e59e00251d2c3a9de11d81677bc67c3b04a594eb
 
 COCOAPODS: 1.11.3

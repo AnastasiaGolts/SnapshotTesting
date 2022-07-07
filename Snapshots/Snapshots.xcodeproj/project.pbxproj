@@ -10,6 +10,9 @@
 		0CFD21A12090DD13528B87AB /* Pods_Snapshots_SnapshotsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5ADC578C9A35E8DADE630CF /* Pods_Snapshots_SnapshotsTests.framework */; };
 		6EC99460B228BF055DA70367 /* Pods_Snapshots_SnapshotsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A32E3AB06D80905F89C6C5 /* Pods_Snapshots_SnapshotsUITests.framework */; };
 		C40BD9D62876D851009DA7F3 /* DateViewControllerSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40BD9D52876D851009DA7F3 /* DateViewControllerSnapshotTests.swift */; };
+		C4EC050528772474006ED593 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = C4EC050428772474006ED593 /* SnapshotTesting */; };
+		C4EC050928772551006ED593 /* ViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC050828772551006ED593 /* ViewControllerTest.swift */; };
+		C4EC050B28773724006ED593 /* DateViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EC050A28773724006ED593 /* DateViewControllerTest.swift */; };
 		C4F496502876C46200C9DA3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4964F2876C46200C9DA3F /* AppDelegate.swift */; };
 		C4F496522876C46200C9DA3F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F496512876C46200C9DA3F /* SceneDelegate.swift */; };
 		C4F496542876C46200C9DA3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F496532876C46200C9DA3F /* ViewController.swift */; };
@@ -55,6 +58,8 @@
 		BCD80092BFDF9037B395CEAB /* Pods-Snapshots.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapshots.release.xcconfig"; path = "Target Support Files/Pods-Snapshots/Pods-Snapshots.release.xcconfig"; sourceTree = "<group>"; };
 		C2894F64EC79748BE6C49525 /* Pods-Snapshots-SnapshotsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapshots-SnapshotsUITests.debug.xcconfig"; path = "Target Support Files/Pods-Snapshots-SnapshotsUITests/Pods-Snapshots-SnapshotsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C40BD9D52876D851009DA7F3 /* DateViewControllerSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewControllerSnapshotTests.swift; sourceTree = "<group>"; };
+		C4EC050828772551006ED593 /* ViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest.swift; sourceTree = "<group>"; };
+		C4EC050A28773724006ED593 /* DateViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewControllerTest.swift; sourceTree = "<group>"; };
 		C4F4964C2876C46200C9DA3F /* Snapshots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapshots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F4964F2876C46200C9DA3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4F496512876C46200C9DA3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CFD21A12090DD13528B87AB /* Pods_Snapshots_SnapshotsTests.framework in Frameworks */,
+				C4EC050528772474006ED593 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +128,24 @@
 				6217C11EEFAF1F836C8BC52D /* Pods-Snapshots-SnapshotsTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		C4EC05062877250B006ED593 /* SnapshotTesting */ = {
+			isa = PBXGroup;
+			children = (
+				C4EC050828772551006ED593 /* ViewControllerTest.swift */,
+				C4EC050A28773724006ED593 /* DateViewControllerTest.swift */,
+			);
+			path = SnapshotTesting;
+			sourceTree = "<group>";
+		};
+		C4EC050728772522006ED593 /* FBSnapShotTestCase */ = {
+			isa = PBXGroup;
+			children = (
+				C4F496692876C46400C9DA3F /* ViewControllerSnapshotsTests.swift */,
+				C40BD9D52876D851009DA7F3 /* DateViewControllerSnapshotTests.swift */,
+			);
+			path = FBSnapShotTestCase;
 			sourceTree = "<group>";
 		};
 		C4F496432876C46200C9DA3F = {
@@ -165,8 +189,8 @@
 		C4F496682876C46400C9DA3F /* SnapshotsTests */ = {
 			isa = PBXGroup;
 			children = (
-				C4F496692876C46400C9DA3F /* ViewControllerSnapshotsTests.swift */,
-				C40BD9D52876D851009DA7F3 /* DateViewControllerSnapshotTests.swift */,
+				C4EC05062877250B006ED593 /* SnapshotTesting */,
+				C4EC050728772522006ED593 /* FBSnapShotTestCase */,
 			);
 			path = SnapshotsTests;
 			sourceTree = "<group>";
@@ -248,6 +272,9 @@
 				C4F496672876C46400C9DA3F /* PBXTargetDependency */,
 			);
 			name = SnapshotsTests;
+			packageProductDependencies = (
+				C4EC050428772474006ED593 /* SnapshotTesting */,
+			);
 			productName = SnapshotsTests;
 			productReference = C4F496652876C46400C9DA3F /* SnapshotsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -304,6 +331,9 @@
 				Base,
 			);
 			mainGroup = C4F496432876C46200C9DA3F;
+			packageReferences = (
+				C4EC050328772474006ED593 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = C4F4964D2876C46200C9DA3F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -465,8 +495,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4EC050B28773724006ED593 /* DateViewControllerTest.swift in Sources */,
 				C40BD9D62876D851009DA7F3 /* DateViewControllerSnapshotTests.swift in Sources */,
 				C4F4966A2876C46400C9DA3F /* ViewControllerSnapshotsTests.swift in Sources */,
+				C4EC050928772551006ED593 /* ViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,6 +852,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C4EC050328772474006ED593 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C4EC050428772474006ED593 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4EC050328772474006ED593 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C4F496582876C46200C9DA3F /* Snapshots.xcdatamodeld */ = {
